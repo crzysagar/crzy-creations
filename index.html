@@ -1,27 +1,34 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CRZY CREATIONS — Wear Your Crazy</title><meta name="description" content="CRZY CREATIONS fashion store">
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRZY CREATIONS — V4 Fashion Store</title><meta name="description" content="CRZY CREATIONS — bold fashion, curated for you.">
 <link rel="stylesheet" href="style.css"></head><body>
 <div class="top">FREE SHIPPING OVER ₹999 • COD AVAILABLE • EASY 7-DAY RETURNS</div>
 <header><button class="hamb" onclick="nav.classList.toggle('show')">☰</button><a class="brand" href="#home">CRZY<small>CREATIONS</small></a>
-<nav id="nav"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#new">New Arrivals</a><a href="#story">Our Story</a><a href="#contact">Contact</a></nav>
+<nav id="nav"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#new">New Arrivals</a><a href="#collections">Collections</a><a href="#story">Our Story</a><a href="#contact">Contact</a></nav>
 <div class="icons"><button onclick="focusSearch()">⌕</button><button onclick="wishlistView()">♡ <b id="wc">0</b></button><button onclick="openCart()">🛍 <b id="bc">0</b></button></div></header>
-<section class="hero" id="home"><div class="hero-art"><span>CRZY<br>NEW DROP</span></div><div class="hero-copy"><small>THE 2026 EDIT</small><h1>Wear Your<br><i>Crazy.</i></h1><p>Bold pieces. Easy confidence. Your style, your rules.</p><a class="btn" href="#shop">SHOP THE DROP →</a></div></section>
+
+<section class="hero" id="home"><div class="hero-photo"><div class="photo-label">V4<br>NEW DROP</div></div><div class="hero-copy"><small>THE NEW CRZY EDIT</small><h1>Style that<br><i>stands out.</i></h1><p>Discover statement dresses, effortless co-ords and everyday pieces made for your own kind of crazy.</p><a class="btn" href="#shop">SHOP NOW →</a></div></section>
 <div class="ticker"><b>NEW ARRIVALS</b><b>BESTSELLERS</b><b>LIMITED DROPS</b><b>CRZY FAM</b></div>
-<section class="section"><small class="pink">SHOP BY MOOD</small><h2>Find your kind of CRZY.</h2><div class="moods">
-<button onclick="filter('dress')"><span>01</span><strong>Everyday Dresses</strong><em>Easy & effortless →</em></button>
+
+<section class="section" id="collections"><small class="pink">SHOP BY COLLECTION</small><h2>Choose your mood.</h2><div class="moods">
+<button onclick="filter('dress')"><span>01</span><strong>Dresses</strong><em>Everyday to occasion →</em></button>
 <button onclick="filter('party')"><span>02</span><strong>Party Edit</strong><em>Make an entrance →</em></button>
 <button onclick="filter('ethnic')"><span>03</span><strong>Ethnic Edit</strong><em>Classic with a twist →</em></button>
-<button onclick="filter('coord')"><span>04</span><strong>Co-ord Sets</strong><em>Matching made easy →</em></button></div></section>
-<section class="section" id="shop"><div class="shophead"><div><small class="pink">THE CRZY EDIT</small><h2>Trending now.</h2></div>
-<div class="filters"><button class="on" onclick="filter('all',this)">All</button><button onclick="filter('dress',this)">Dresses</button><button onclick="filter('top',this)">Tops</button><button onclick="filter('coord',this)">Co-ords</button><button onclick="filter('ethnic',this)">Ethnic</button><button onclick="filter('party',this)">Party</button></div></div>
-<input class="search" id="search" oninput="render()" placeholder="Search your next favourite…"><div class="grid" id="products"></div><p id="none" class="none" hidden>No styles found.</p></section>
-<section class="feature" id="new"><div class="feature-art"><b>LIMITED<br>DROP</b></div><div><small class="pink">NEW ARRIVAL</small><h2>The kind of dress people remember.</h2><p>Meet the latest CRZY silhouettes — designed for days when ordinary isn't enough.</p><a class="under" href="#shop">EXPLORE NEW ARRIVALS →</a></div></section>
-<section class="story" id="story"><div><small class="pink">WHY CRZY?</small><h2>Not made<br>to blend in.</h2></div><p>CRZY CREATIONS is built around confidence, comfort and individuality. We're here for the outfit that makes you smile before you leave the room.</p></section>
-<section class="offer"><small>THIS WEEKEND</small><h2>Flat <i>40% OFF</i></h2><p>Selected styles. Limited time.</p><a class="btn dark" href="#shop">SHOP SALE →</a></section>
-<section class="trust"><div>🚚<b>Fast delivery</b><small>Across India</small></div><div>📦<b>COD available</b><small>Pay on delivery</small></div><div>↩️<b>Easy returns</b><small>7-day return window</small></div><div>🛡️<b>Secure checkout</b><small>Protected payments</small></div></section>
+<button onclick="filter('coord')"><span>04</span><strong>Co-ords</strong><em>Matching made easy →</em></button></div></section>
+
+<section class="section" id="shop"><div class="shophead"><div><small class="pink">THE CRZY EDIT</small><h2>Shop the drop.</h2></div><div class="filters"><button class="on" onclick="filter('all',this)">All</button><button onclick="filter('dress',this)">Dresses</button><button onclick="filter('coord',this)">Co-ords</button><button onclick="filter('ethnic',this)">Ethnic</button><button onclick="filter('party',this)">Party</button></div></div>
+<div class="searchrow"><input id="search" class="search" oninput="render()" placeholder="Search dresses, co-ords, ethnic…"><select id="sort" onchange="render()"><option value="featured">Featured</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option></select></div>
+<div class="grid" id="products"></div><p id="none" class="none" hidden>No styles found.</p></section>
+
+<section class="banner" id="new"><div class="banner-photo"></div><div><small class="pink">NEW ARRIVALS</small><h2>New season.<br>New energy.</h2><p>Fresh silhouettes for your next moment. Replace the demo product photos with your own catalogue images whenever you're ready.</p><a class="under" href="#shop">EXPLORE NEW ARRIVALS →</a></div></section>
+
+<section class="story" id="story"><div><small class="pink">WHY CRZY?</small><h2>Not made<br>to blend in.</h2></div><p>CRZY CREATIONS is a fashion concept built around confidence, comfort and individuality. V4 is designed to make discovering products feel closer to a real online fashion store.</p></section>
+
+<section class="offer"><small>LIMITED OFFER</small><h2>Flat <i>40% OFF</i></h2><p>Selected styles • Limited time</p><a class="btn dark" href="#shop">SHOP SALE →</a></section>
+<section class="trust"><div>🚚<b>Fast delivery</b><small>Across India</small></div><div>📦<b>COD available</b><small>Pay on delivery</small></div><div>↩️<b>Easy returns</b><small>7-day return window</small></div><div>🛡️<b>Secure checkout</b><small>Ready for backend integration</small></div></section>
 <section class="newsletter" id="contact"><small>JOIN THE CRZY FAM</small><h2>First to know.<br>First to shop.</h2><form onsubmit="join(event)"><input type="email" required placeholder="Your email address"><button>JOIN →</button></form><p id="msg"></p></section>
-<footer><a class="brand" href="#home">CRZY<small>CREATIONS</small></a><p>Wear Your Crazy. Create Your Moment.</p><div><a href="#shop">Shop</a><a href="#story">About</a><a href="#contact">Contact</a><a href="#">Size Guide</a><a href="#">Shipping</a><a href="#">Returns</a></div><small>© 2026 CRZY CREATIONS • V3 Front-end</small></footer>
+<footer><a class="brand" href="#home">CRZY<small>CREATIONS</small></a><p>Wear Your Crazy. Create Your Moment.</p><div><a href="#shop">Shop</a><a href="#story">About</a><a href="#contact">Contact</a><a href="#">Size Guide</a><a href="#">Shipping</a><a href="#">Returns</a></div><small>© 2026 CRZY CREATIONS • V4 Front-end</small></footer>
+
 <div class="modal" id="modal"><div class="modalbox"><button class="x" onclick="closeModal()">×</button><div id="detail"></div></div></div>
-<aside id="cart"><button class="x" onclick="closeCart()">×</button><h2>Your Bag</h2><div id="cartitems"></div><hr><div class="total"><span>Total</span><b id="total">₹0</b></div><button class="btn full" onclick="checkout()">CHECKOUT</button><small>Demo front-end. Real payments come after backend setup.</small></aside><div id="shade" onclick="closeCart()"></div>
+<aside id="cart"><button class="x" onclick="closeCart()">×</button><h2>Your Bag</h2><div id="cartitems"></div><hr><div class="total"><span>Total</span><b id="total">₹0</b></div><button class="btn full" onclick="checkout()">CHECKOUT</button><small>Demo checkout — connect secure backend/payment before accepting real orders.</small></aside><div id="shade" onclick="closeCart()"></div>
 <script src="script.js"></script></body></html>
