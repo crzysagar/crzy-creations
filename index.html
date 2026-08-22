@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRZY CREATIONS — Wear Your Crazy</title>
+<meta name="description" content="CRZY CREATIONS — bold, beautiful fashion for every moment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top">FREE SHIPPING ON ORDERS OVER ₹9999 • COD AVAILABLE • EASY 7-DAY RETURNS</div>
+
+<header>
+  <button class="hamb" onclick="toggleMenu()">☰</button>
+  <a class="brand" href="#"><span>CRZY</span><small>CREATIONS</small></a>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#new">New Arrivals</a><a href="#shop">Dresses</a>
+    <a href="#shop">Tops</a><a href="#shop">Co-ords</a><a href="#shop">Ethnic</a><a href="#shop">Western</a>
+    <a href="#shop">Accessories</a><a href="#sale">Sale 🔥</a>
+  </nav>
+  <div class="actions">
+    <button onclick="focusSearch()">⌕</button><button onclick="openBag()">♡</button>
+    <button onclick="openBag()">🛒 <b id="count">0</b></button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-photo"><div class="model-card">NEW<br>COLLECTION</div></div>
+  <div class="hero-copy">
+    <p>STYLE • COMFORT • CONFIDENCE</p>
+    <h1>CRZY</h1><h2>CREATIONS</h2>
+    <h3>Wear Your Crazy. Create Your Moment.</h3>
+    <div class="pink">BE BOLD. BE UNIQUE. BE YOU.</div>
+    <a class="cta" href="#shop">SHOP NOW →</a>
+  </div>
+</section>
+
+<section class="chips" id="new">
+  <button onclick="filter('all')">All</button><button onclick="filter('dress')">👗 Dresses</button>
+  <button onclick="filter('kurti')">Kurti</button><button onclick="filter('top')">Tops</button>
+  <button onclick="filter('coord')">Co-ords</button><button onclick="filter('party')">Party Wear</button>
+  <button onclick="filter('ethnic')">Ethnic</button><button onclick="filter('western')">Western</button>
+  <button onclick="filter('sale')">Sale</button>
+</section>
+
+<section class="shop" id="shop">
+  <div class="section-title"><div><p>TRENDING NOW</p><h2>Most-loved styles by our CRZY fam ❤️</h2></div>
+  <input id="search" oninput="render()" placeholder="Search dresses, kurtis, tops..."></div>
+  <div class="products" id="products"></div>
+</section>
+
+<section class="promo" id="sale">
+  <div><p>SUMMER VIBES</p><h2>Flat <strong>40% OFF</strong></h2><span>On selected collections</span><br><a class="cta" href="#shop">SHOP SALE →</a></div>
+</section>
+
+<section class="perks">
+  <div>🚚 <strong>Free Shipping</strong><small>On orders ₹999+</small></div>
+  <div>📦 <strong>COD Available</strong><small>Pay on delivery</small></div>
+  <div>↩️ <strong>Easy Returns</strong><small>7 days return</small></div>
+  <div>🛡️ <strong>Secure Payments</strong><small>100% safe & secure</small></div>
+  <div>🎧 <strong>24/7 Support</strong><small>We're here to help</small></div>
+</section>
+
+<section class="newsletter">
+  <h2>Join the CRZY Fam!</h2><p>Get exclusive offers, new arrivals & style tips.</p>
+  <form onsubmit="subscribe(event)"><input id="email" type="email" placeholder="Enter your email" required><button>SUBSCRIBE</button></form>
+  <small id="msg"></small>
+</section>
+
+<footer>
+  <div class="brand"><span>CRZY</span><small>CREATIONS</small></div>
+  <p>Wear Your Crazy. Create Your Moment.</p>
+  <div class="links"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#">Size Guide</a><a href="#">Track Order</a><a href="#">Contact</a><a href="#">Returns</a><a href="#">Privacy</a></div>
+  <small>© 2026 CRZY CREATIONS. Demo storefront.</small>
+</footer>
+
+<aside id="bag"><button class="close" onclick="closeBag()">×</button><h2>Your Bag</h2><div id="bagItems"></div><hr><strong>Total: ₹<span id="total">0</span></strong><button class="checkout" onclick="alert('Demo checkout. Connect a payment gateway before taking real payments.')">CHECKOUT</button></aside>
+<div id="shade" onclick="closeBag()"></div>
+<script src="script.js"></script>
+</body>
+</html>
